@@ -1,9 +1,9 @@
-const textarea = document.querySelector("textarea");
-const voiceList = document.querySelector("select");
-const speechBtn = document.querySelector("button");
+const textarea = document.querySelector("textarea"),
+    voiceList = document.querySelector("select"),
+    speechBtn = document.querySelector("button");
 
-const synth = speechSynthesis,
-  isSpeaking = true;
+let synth = speechSynthesis,
+    isSpeaking = true;
 
 voices();
 
@@ -27,21 +27,21 @@ speechBtn.addEventListener("click", (e) => {
       setInterval(() => {
         if (!synth.speaking && !isSpeaking) {
           isSpeaking = true;
-          speechBtn.innerText = "Convert To Speech";
+          speechBtn.innerText = "Converter em Voz";
         } else {
         }
       }, 500);
       if (isSpeaking) {
         synth.resume();
         isSpeaking = false;
-        speechBtn.innerText = "Pause Speech";
+        speechBtn.innerText = "Pausar fala";
       } else {
         synth.pause();
         isSpeaking = true;
-        speechBtn.innerText = "Resume Speech";
+        speechBtn.innerText = "Rotomar fala";
       }
     } else {
-      speechBtn.innerText = "Convert To Speech";
+      speechBtn.innerText = "Converter em Voz";
     }
   }
 });
