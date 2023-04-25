@@ -12,12 +12,12 @@ body{
     align-items: center;
     justify-content: center;
     min-height: 100vh;
-    background-color: #5256ad;
+    background: linear-gradient(to bottom, #1e82b1, #7ecef3);
 }
 
 ::selection{
     color: #fff;
-    background-color: #5256ad;
+    background-color: #2ba3db;
 }
 
 .wrapper{
@@ -106,14 +106,16 @@ form button{
     height: 52px;
     color: #fff;
     font-size: 17px;
-    background-color: #675afe;
+    background-color: #2ba3db;
     cursor: pointer;
     margin-top: 10px;
     transition: 0.3s ease;
 }
 
 form button:hover{
-    background-color: #4534fe;
+    background: transparent;
+    border: 1px solid #2ba3db;
+    color: #2ba3db;
 }
 
 @media(max-width: 400px) {
